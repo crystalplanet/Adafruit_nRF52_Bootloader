@@ -393,7 +393,7 @@ void led_tick(void) {
 static uint32_t rgb_color;
 static bool temp_color_active = false;
 
-void led_state(uint32_t state) {
+void __attribute__((weak)) led_state(uint32_t state) {
   uint32_t new_rgb_color = rgb_color;
   uint32_t temp_color = 0;
   switch (state) {
@@ -639,7 +639,6 @@ void neopixel_write (uint8_t *pixels) {
   while(!nrf_spim_event_check(spi, NRF_SPIM_EVENT_ENDTX));
 }
 #endif
-
 
 #if defined(LED_RGB_RED_PIN) && defined(LED_RGB_GREEN_PIN) && defined(LED_RGB_BLUE_PIN)
 

@@ -63,6 +63,7 @@ target_sources(bootloader PUBLIC
   # nrfx
   ${NRFX_DIR}/drivers/src/nrfx_power.c
   ${NRFX_DIR}/drivers/src/nrfx_nvmc.c
+  ${NRFX_DIR}/drivers/src/nrfx_twi.c
   ${NRFX_DIR}/mdk/system_${MCU_VARIANT}.c
   # sdk 11
   ${SDK11_DIR}/libraries/bootloader_dfu/bootloader.c
